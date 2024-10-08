@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#bash script to display all files in current directory
+
+for file in *; do
+if [[ $file == '-' ]]; then
+echo "${file#*-}"
+else
+echo "$file"
+fi
+done
