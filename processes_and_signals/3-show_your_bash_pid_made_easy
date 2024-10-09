@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#bash script that display PID witout using ps and bash word
+
+pgrep -l bash
