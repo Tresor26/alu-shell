@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#bash script that kill process in another terminal
+
+pkill -SIGKILL -f "./7-highlander"
