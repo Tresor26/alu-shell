@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#bash script that kills the processes
+
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+if [ -n "$pid" ]; then
+  kill "$pid"
+  echo "Process 4-to_infinity_and_beyond with PID $pid has been terminated."
+else
+  echo "4-to_infinity_and_beyond is not running."
+fi
