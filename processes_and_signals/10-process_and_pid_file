@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#bash script that do this
+
+sudo bash -c "echo $$ > /var/run/myscript.pid"
+
+trap 'echo "I hate the kill command"; sudo rm -f /var/run/myscript.pid; exit' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'sudo rm -f /var/run/myscript.pid; exit' SIGQUIT
+
+# Infinite loop
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
